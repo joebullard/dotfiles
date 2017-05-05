@@ -120,6 +120,3 @@ done
 alias dsh='function { docker exec -it $1 bash }'
 alias drmall='docker rm $(docker ps -a -q)'
 alias dclean="docker rmi \$(docker images -a | awk  '/^<none>/ { print \$3 }')"
-
-source "$HOMEDEV/tools/google-cloud-sdk/path.zsh.inc"
-source "$HOMEDEV/tools/google-cloud-sdk/completion.zsh.inc"
