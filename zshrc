@@ -120,3 +120,9 @@ done
 alias dsh='function { docker exec -it $1 bash }'
 alias drmall='docker rm $(docker ps -a -q)'
 alias dclean="docker rmi \$(docker images -a | awk  '/^<none>/ { print \$3 }')"
+
+# The next line updates PATH for the Google Cloud SDK.
+source "$HOMEDEV/tools/google-cloud-sdk/path.zsh.inc"
+
+# The next line enables shell command completion for gcloud.
+source "$HOMEDEV/tools/google-cloud-sdk/completion.zsh.inc"
